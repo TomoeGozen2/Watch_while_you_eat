@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Click the button to find a video to watch while you eat!</h1>
+        <iframe width="560" height="315" 
+         id = "video"
+         title="YouTube video player" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+         gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+          <button onclick = "return choose_video()" id = "video_essay">Let Them Eat</button>
+          
+        <script>
+            //make 2d array that holds the different arrays of video categories
+            //then when the user clicks  a different button they get a different video
+                var videos_list = ['https://www.youtube.com/embed/FpNAKDx4CwY?si=FowUqVInOgtlqKCO', 
+                'https://www.youtube.com/embed/QCYMH-lp4oM?si=jgUGo_jy7RSpDwcw', 
+                'https://www.youtube.com/embed/V6H3YMS9LWw?si=BwX5YFq2Vas0YsgI',
+                'https://www.youtube.com/embed/R0oHkeJW0ao?si=paYAinHgZBBEW5Ws',
+                'https://www.youtube.com/embed/EF9ke_kfIE8?si=5RavwrW8qoxVOC75',
+            'https://www.youtube.com/embed/3KIRzgqespc?si=LnrL2Bp0MMowwfGn',
+        'https://www.youtube.com/embed/3KIRzgqespc?si=LnrL2Bp0MMowwfGn',
+        'https://www.youtube.com/embed/tZeAfqssRSs?si=BAe6gxQKLgPyNKH-',
+        'https://www.youtube.com/embed/lKNB3ZeTYiI?si=eGMIfNxHnkbSEx_d',
+    'https://www.youtube.com/embed/WjCkLIw71AU?si=Rtvjfqx7jrVp_jPP',
+'https://www.youtube.com/embed/SECHUEQaLRM?si=NJgqx2Wx3AHTK9OB',
+'https://www.youtube.com/embed/euTe191sAWg?si=i9gC__jy6z4_nIj5'];
+                //Genrate a random number between 0 and the array length
+                function choose_video(){
+                    
+                        var random_video = Math.floor(Math.random() * videos_list.length);
+                        document.getElementById("video").src = videos_list[random_video];
+                    
+                    
+                }
+                
+
+        </script>
+    </body>
+</html>
